@@ -1,0 +1,25 @@
+{
+  "name": "node-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
+    "build": "gulp clean && babel src -s -D -d dist --presets env",
+    "start": "node dist"
+  },
+  "keywords": [],
+  "author": "marciocamello@outlook.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "nodemon": "^1.14.11"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

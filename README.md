@@ -1,4 +1,4 @@
-# Node Express + ES6
+# Node Restify + ES6
 
 ## Build
 

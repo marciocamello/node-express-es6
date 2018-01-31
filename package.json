@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
-    "build": "gulp clean && babel src -s -D -d dist --presets env",
-    "start": "node dist"
+    "build": "gulp clean && babel src -D -d dist --presets env",
+    "start": "pm2 startOrRestart --no-daemon pm2.yml && pm2 save"
   },
   "keywords": [],
   "author": "marciocamello@outlook.com",
@@ -20,7 +20,7 @@
     "nodemon": "^1.14.11"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "cors": "^2.8.4",
+    "restify": "^6.3.4"
   }
 }

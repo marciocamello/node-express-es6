@@ -1,0 +1,11 @@
+apps:
+  - name     : 'node-es6' # Nome do projeto o qual vai ficar salvo no pm2
+    script   : ./dist/index.js # Aqui aponte para sua aplicação do NodeJS
+    instances: 1 # Numero de instancias para o cluster do NodeJS
+    exec_mode: cluster # Se vai ou nao ativar o cluster do NodeJS
+    watch: true # Se vai ficar monitorando a aplicação, para não ser necessário restartar ao fazer modificações na aplicação NodeJS
+    # Variaveis de ambiente do NodeJS
+    env    :
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
